@@ -15,7 +15,7 @@ class neuron {
 	
 
 	
-	//функция заполнения весами
+	//С„СѓРЅРєС†РёСЏ Р·Р°РїРѕР»РЅРµРЅСЏ РЅР°С‡Р°Р»СЊРЅС‹РјРё РІРµСЃР°РјРё 
 	void fullweight (){
 		for (int i=0; i<4; i++){
 		weights[i] = 0;
@@ -24,7 +24,7 @@ class neuron {
 		
 		}
 		
-	// функция активации 
+	//С„СѓРЅРєС†РёСЏ Р°РєС‚РёРІР°С†РёРё
 	void activ(int n){
 		activation=0;
 		for (int i=0;i<4; i++)
@@ -33,7 +33,7 @@ class neuron {
 	}
 	
 	
-	//error
+	//С„СѓРЅРєС†РёСЏ РѕС‚РєР»РѕРЅРµРЅРёСЏ
 	void err(int expect){
 		if ((activation-expect)!=0)
 		error= abs(activation - expect);
@@ -41,7 +41,7 @@ class neuron {
 	}
 	
 
-	//обновленные веса c помощью обучения Хебба 
+	//РѕР±РЅРѕРІР»РµРЅРёРµ РІРµСЃРѕРІ СЃ РїРѕРјРѕС‰СЊСЋ РѕР±СѓС‡РµРЅРёСЏ РјРµС‚РѕРґРѕРј "РҐРµР±Р±Р°"
 	void foo4 (int expct,int n) {
 	int num=0;
 		while (activation!=expct){

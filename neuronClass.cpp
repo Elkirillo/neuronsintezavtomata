@@ -1,7 +1,5 @@
 #include "neuronClass.h"
-#include <iostream>
-using std::cout;
-using std::endl;
+
 //метод заполненя начальными весами 
 void neuron::fullweight ()
 {

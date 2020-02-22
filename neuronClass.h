@@ -1,5 +1,8 @@
 #pragma once 
-
+#include <iostream>
+#include <cmath>
+using std::cout;
+using std::endl;
 class neuron 
 {
 	private:

@@ -2,7 +2,7 @@
 #include <iostream>
 using std::cout;
 using std::endl;
-
+//метод заполненя начальными весами 
 void neuron::fullweight ()
 {
 	for (int i=0; i<4; i++)
@@ -11,7 +11,7 @@ void neuron::fullweight ()
 		cout << weights[i] << endl;
 	}	
 }
-
+//метод активации
 void neuron::activ(int n)
 {
 	activation=0;
@@ -19,15 +19,13 @@ void neuron::activ(int n)
 			activation=activation+weights[i]*indata[n][i];
 	cout << "the first result= "<<activation << endl;
 }
-
-
+//метод подсчета отклонения
 void neuron::deviation(int expect)
 {
 	if ((activation-expect)!=0)
 		error= abs(activation - expect);
-
 }
-
+//метод обновление весов с помощью обучения методом "Хебба"
 void neuron::foo4 (int expct,int n) 
 {
 	int num=0;
@@ -59,12 +57,13 @@ void neuron::foo4 (int expct,int n)
 					if (num > expct)
 							weights[i]=abs(weights[i]-1);
 				}	
+				//промежуточный вывод весов
 				cout<<weights[i] << endl;
 			}
 		}
 	}
 }
-
+//метод вывода весов
 void neuron::show() 
 {
 	for (int i=0;i<4;i++)

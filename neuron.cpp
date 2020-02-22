@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 #include "neuronClass.h"
 using namespace std;
 
